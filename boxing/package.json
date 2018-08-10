@@ -23,7 +23,7 @@
             "showLikes": false,
             "showComments": false,
             "labelResponseSending": "Submitting your details",
-            "labelResponded": "Livestock alert provided",
+            "labelResponded": "boxing provided",
             "labelResponseFailed": "Livestock alert submission failed",
             "isResponseEditable": false
         },
