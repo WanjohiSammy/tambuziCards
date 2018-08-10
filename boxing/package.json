@@ -1,11 +1,11 @@
 {
-    "id": "com.nanyukiCustomerssam.Boxing.",
+    "id": "com.nanyukiCustomerssamm.Boxing.",
     "schemaVersion": 1,
     "version": "1",
     "minorVersion": 2,
     "providerName": "NanyukiAF",
-    "displayName": "Boxing Details",
-    "description": "Boxing Details",
+    "displayName": "Boxing ",
+    "description": "Boxing ",
     "icon": "boxing.png",
     "appModel": "AppModel.json",
     "dials": {
