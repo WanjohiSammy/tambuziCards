@@ -1,12 +1,12 @@
 {
-    "id": "com.tambuzi.pickings",
+    "id": "com.nanyukicustomers.profile",
     "schemaVersion": 1,
-    "version": "5",
+    "version": "10",
     "minorVersion": 1,
     "providerName": "NanyukiAF",
-    "displayName": "Picking Details",
-    "description": "add picking details",
-    "icon": "picking.png",
+    "displayName": "Profile Submit",
+    "description": "Profile Submit",
+    "icon": "profile.png",
     "appModel": "AppModel.json",
     "dials": {
         "isLocalised": false,
@@ -23,8 +23,8 @@
             "showLikes": false,
             "showComments": false,
             "labelResponseSending": "Submitting your details",
-            "labelResponded": "Picking Details provided",
-            "labelResponseFailed": "Picking Details submission failed",
+            "labelResponded": "Livestock alert provided",
+            "labelResponseFailed": "Livestock alert submission failed",
             "isResponseEditable": false
         },
         "ResponseResultsView": {

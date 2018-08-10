@@ -1,5 +1,5 @@
 {
-    "title": "Picking Details",
+    "title": "Livestock Alert",
     "visibility": "All",
     "expiry": 0,
     "isAnonymous": false,
@@ -7,16 +7,12 @@
     "isLocationRequested": false,
     "questions": [
         {
-            "title": "Pick Number",
+            "title": "Box Number",
             "type": "Number"
         },
         {
-            "title": "Bed Number",
-            "type": "Number"
-        },
-        {
-            "title": "Flower Pack Image",
-            "type": "Image"
+            "title": "Location Friendly Name",
+            "type": "Text"
         },
         {
             "title": "Name",

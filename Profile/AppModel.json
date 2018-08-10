@@ -1,5 +1,5 @@
 {
-    "title": "Picking Details",
+    "title": "Profile Update Alert",
     "visibility": "All",
     "expiry": 0,
     "isAnonymous": false,
@@ -7,15 +7,19 @@
     "isLocationRequested": false,
     "questions": [
         {
-            "title": "Pick Number",
-            "type": "Number"
+            "title": "Employee Number",
+            "type": "Text"
         },
         {
-            "title": "Bed Number",
-            "type": "Number"
+            "title": "Preferred Name",
+            "type": "Text"
         },
         {
-            "title": "Flower Pack Image",
+            "title": "My Information",
+            "type": "Text"
+        },
+        {
+            "title": "My Photo",
             "type": "Image"
         },
         {
