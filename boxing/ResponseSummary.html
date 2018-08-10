@@ -43,7 +43,7 @@
 
                 var navigationBar = new KASClient.UI.KASFormPageNavigationBar();
 
-                navigationBar.iconPath = "picking.png";
+                navigationBar.iconPath = "boxing.png";
 
                 var mainText = KASClient.UI.getElement("div", {
                     "font-size": "18px",
@@ -154,7 +154,7 @@
                 }
 
                 var errorPage = new KASFormPage();
-                errorPage.navigationBar.iconPath = "livestock.png";
+                errorPage.navigationBar.iconPath = "boxing.png";
                 errorPage.navigationBar.title = _strings["strMiniAppTitle"];
                 errorPage.moduleContainer.backgroundColor = "white";
 
@@ -311,7 +311,7 @@
                 var cell22 = row2.insertCell(1);
                 cell21.className = "first-column";
                 cell21.innerHTML = _strings["Phone"];
-                cell22.innerHTML = ": " + _myFormResponses.questionToAnswerMap[count];
+                cell12.innerHTML = ": " + _myFormResponses.questionToAnswerMap[count];
                 count++;
 
                 KASClient.UI.addElement(details, detailsDiv);

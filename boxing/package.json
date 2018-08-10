@@ -1,12 +1,12 @@
 {
-    "id": "com.tambuzi.pickings",
+    "id": "com.nanyukiCustomerssam.Boxing.",
     "schemaVersion": 1,
-    "version": "5",
-    "minorVersion": 4,
+    "version": "1",
+    "minorVersion": 2,
     "providerName": "NanyukiAF",
-    "displayName": "Picking",
-    "description": "add picking details",
-    "icon": "picking.png",
+    "displayName": "Boxing Details",
+    "description": "Boxing Details",
+    "icon": "boxing.png",
     "appModel": "AppModel.json",
     "dials": {
         "isLocalised": false,
@@ -23,8 +23,8 @@
             "showLikes": false,
             "showComments": false,
             "labelResponseSending": "Submitting your details",
-            "labelResponded": "Picking Details provided",
-            "labelResponseFailed": "Picking Details submission failed",
+            "labelResponded": "Livestock alert provided",
+            "labelResponseFailed": "Livestock alert submission failed",
             "isResponseEditable": false
         },
         "ResponseResultsView": {

@@ -1,12 +1,12 @@
 {
-    "id": "com.tambuzi.pickings",
+    "id": "com.nanyukicustomers.Packing",
     "schemaVersion": 1,
     "version": "5",
-    "minorVersion": 4,
+    "minorVersion": 5git ,
     "providerName": "NanyukiAF",
-    "displayName": "Picking",
-    "description": "add picking details",
-    "icon": "picking.png",
+    "displayName": "Packing Details",
+    "description": "Packing Detals",
+    "icon": "packing.png",
     "appModel": "AppModel.json",
     "dials": {
         "isLocalised": false,
@@ -23,8 +23,8 @@
             "showLikes": false,
             "showComments": false,
             "labelResponseSending": "Submitting your details",
-            "labelResponded": "Picking Details provided",
-            "labelResponseFailed": "Picking Details submission failed",
+            "labelResponded": "Packing alert provided",
+            "labelResponseFailed": "Packing alert submission failed",
             "isResponseEditable": false
         },
         "ResponseResultsView": {

@@ -1,20 +1,21 @@
 <html>
 
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <title></title>
-        <link rel="stylesheet" href="themeKaizala.css" />
-	</head>
-	<body onload="onPageLoad()">
-		<div id="header">
-		</div>
-		<div class="section">
-		<div class="body-container">
-			<div id="details"></div>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="themeKaizala.css" />
+</head>
+
+<body onload="onPageLoad()">
+    <div id="header">
+    </div>
+    <div class="section">
+        <div class="body-container">
+            <div id="details"></div>
         </div>
-        
+
         <script type="text/javascript" src="KASClient.js"></script>
-		<script>
+        <script>
             // Type aliases (short names)
             var KASFormPageNavigator = KASClient.UI.KASFormPageNavigator;
             var KASFormPage = KASClient.UI.KASFormPage;
@@ -43,7 +44,7 @@
 
                 var navigationBar = new KASClient.UI.KASFormPageNavigationBar();
 
-                navigationBar.iconPath = "picking.png";
+                navigationBar.iconPath = "planting.png";
 
                 var mainText = KASClient.UI.getElement("div", {
                     "font-size": "18px",
@@ -74,7 +75,7 @@
 
             function onPageLoad() {
                 // Register for Android h/w back press event
-                KASClient.App.registerHardwareBackPressCallback(function () {
+                KASClient.App.registerHardwareBackPressCallback(function() {
                     KASClient.App.dismissCurrentScreen();
                 });
                 // Global error handling
@@ -154,7 +155,7 @@
                 }
 
                 var errorPage = new KASFormPage();
-                errorPage.navigationBar.iconPath = "livestock.png";
+                errorPage.navigationBar.iconPath = "planting.png";
                 errorPage.navigationBar.title = _strings["strMiniAppTitle"];
                 errorPage.moduleContainer.backgroundColor = "white";
 
@@ -193,50 +194,42 @@
                 };
 
                 let totalQuestions = questions.length;
-                
+
                 var count = 0;
 
-                for(var x = 0; x < totalQuestions; x++){
+                for (var x = 0; x < totalQuestions; x++) {
                     let fieldDescription = questions[x];
                     let fieldId = fieldDescription["id"];
                     let fieldTitle = fieldDescription["title"];
                     let fieldType = fieldDescription["type"];
                     let questionResponse;
                     let compressedTitle = fieldTitle.replace(/\s+/g, '');
-                    
-                    if((fieldTitle != "Name") && (fieldTitle != "Phone") && (fieldTitle != "Location") && (fieldTitle != "Response Time"))
-                    {
+
+                    if ((fieldTitle != "Name") && (fieldTitle != "Phone") && (fieldTitle != "Location") && (fieldTitle != "Response Time")) {
                         questionResponse = _myFormResponses.questionToAnswerMap[x];
-                        if(fieldType == 0){
+                        if (fieldType == 0) {
                             let option = fieldDescription["options"][questionResponse];
                             questionResponse = _strings[option.text];
-                        }
-                        
-                        else if(fieldType == 5){
-                            let date = new Date(questionResponse*1000);
+                        } else if (fieldType == 5) {
+                            let date = new Date(questionResponse * 1000);
                             let year = date.getFullYear();
                             let month = (date.getMonth()) + 1;
                             let day = date.getDate();
                             let hours = date.getHours();
                             let minutes = "0" + date.getMinutes();
                             let seconds = "0" + date.getSeconds();
-                            
-                            questionResponse = day + '/' + month + '/' + year + ' ' + hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-                        }
 
-                        else if(fieldType == 6){
+                            questionResponse = day + '/' + month + '/' + year + ' ' + hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+                        } else if (fieldType == 6) {
                             let img = KASClient.UI.getElement("img", {
                                 "width": "100%"
                             });
                             img.setAttribute("src", questionResponse);
 
                             questionResponse = img;
-                        }
-                        
-                        else {
-                        }
+                        } else {}
                         count++;
-      
+
                         let detailsDiv = KASClient.UI.getElement("div", divAttributes);
 
                         let detailsHeader = KASClient.UI.getElement("div", {
@@ -254,12 +247,10 @@
                         });
 
                         let details;
-                        
-                        if(fieldType == 6){
+
+                        if (fieldType == 6) {
                             details = questionResponse;
-                        }
-                        
-                        else {
+                        } else {
                             details = KASClient.UI.getElement("div", {
                                 "color": "#32485f",
                                 "font-size": "12pt",
@@ -269,13 +260,13 @@
                             });
                             details.innerHTML = questionResponse;
                         }
-                        
+
                         KASClient.UI.addElement(details, detailsView);
                         KASClient.UI.addElement(detailsView, detailsDiv);
                         KASClient.UI.addElement(detailsDiv, summaryView);
                     }
                 }
-                
+
                 // Personal Details Summary
                 var detailsDiv = KASClient.UI.getElement("div", divAttributes);
 
@@ -343,7 +334,7 @@
                     locationMap.src =
                         "https://maps.googleapis.com/maps/api/staticmap?zoom=18&size=360x170&maptype=roadmap&markers=color:blue%7C%7C" +
                         _currentLocation["lt"] + "," + _currentLocation["lg"];
-                    locationMap.onerror = function (e) {
+                    locationMap.onerror = function(e) {
                         KASClient.UI.removeElement(locationMap, location);
                     }
                     KASClient.UI.addElement(locationMap, location);
@@ -393,6 +384,7 @@
             function dismissCurrentScreen() {
                 KASClient.App.dismissCurrentScreen();
             };
-		</script>
-	</body>
+        </script>
+</body>
+
 </html>
