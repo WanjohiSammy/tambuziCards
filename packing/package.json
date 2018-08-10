@@ -2,7 +2,7 @@
     "id": "com.nanyukicustomers.Packing",
     "schemaVersion": 1,
     "version": "5",
-    "minorVersion": 3,
+    "minorVersion": 4,
     "providerName": "NanyukiAF",
     "displayName": "Packing Details",
     "description": "Packing Detals",
