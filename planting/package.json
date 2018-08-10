@@ -1,11 +1,11 @@
 {
     "id": "com.nanyukicustomers.planting",
     "schemaVersion": 1,
-    "version": "7",
+    "version": "9",
     "minorVersion": 1,
     "providerName": "NanyukiAF",
-    "displayName": "Planting Details",
-    "description": "Planting Details",
+    "displayName": "Planting",
+    "description": "Planting",
     "icon": "planting.png",
     "appModel": "AppModel.json",
     "dials": {
