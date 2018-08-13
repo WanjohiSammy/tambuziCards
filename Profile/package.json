@@ -1,11 +1,11 @@
 {
-    "id": "com.nanyukicustomers.profile",
+    "id": "com.nanyukicustomer.profile",
     "schemaVersion": 1,
-    "version": "10",
-    "minorVersion": 1,
+    "version": "2",
+    "minorVersion": 4,
     "providerName": "NanyukiAF",
-    "displayName": "Profile Submit",
-    "description": "Profile Submit",
+    "displayName": "Profile",
+    "description": "Submit Profile details",
     "icon": "profile.png",
     "appModel": "AppModel.json",
     "dials": {
@@ -23,8 +23,8 @@
             "showLikes": false,
             "showComments": false,
             "labelResponseSending": "Submitting your details",
-            "labelResponded": "Livestock alert provided",
-            "labelResponseFailed": "Livestock alert submission failed",
+            "labelResponded": "Profile details updated",
+            "labelResponseFailed": "Profile details submission failed",
             "isResponseEditable": false
         },
         "ResponseResultsView": {

@@ -1,11 +1,15 @@
 {
+<<<<<<< HEAD
     "id": "com.nanyukiCustomersCard.Boxing.",
+=======
+    "id": "com.nanyukiCustomerssamm.Boxing.",
+>>>>>>> af87f09f9dcf5fd09a7750e85cc66d81bbf3f2e7
     "schemaVersion": 1,
     "version": "1",
     "minorVersion": 1,
     "providerName": "NanyukiAF",
-    "displayName": "Boxing Details",
-    "description": "Boxing Details",
+    "displayName": "Boxing ",
+    "description": "Boxing ",
     "icon": "boxing.png",
     "appModel": "AppModel.json",
     "dials": {
@@ -23,7 +27,7 @@
             "showLikes": false,
             "showComments": false,
             "labelResponseSending": "Submitting your details",
-            "labelResponded": "Livestock alert provided",
+            "labelResponded": "boxing provided",
             "labelResponseFailed": "Livestock alert submission failed",
             "isResponseEditable": false
         },

@@ -171,7 +171,6 @@
             questionToAnswerMap[count] = JSON.stringify(_currentLocation);
             count++;
             questionToAnswerMap[count] = (new Date()).getTime();
-            alert(JSON.stringify(questionToAnswerMap));
             // Finally submit the response
             KASClient.Form.sumbitFormResponse(questionToAnswerMap, null, false, true /* showInChatCanvas */);
         }
@@ -574,7 +573,6 @@
         function invalidateFooter() {
             inflateFooterView();
         }
-
         function inflateFooterView() {
             var footer = document.getElementById("footer");
             KASClient.UI.clearElement(footer);
@@ -659,34 +657,26 @@
                 let questions = _form["questions"];
                 let totalQuestions = questions.length;
                 var count = 0;
-            
-            for(var x = 0; x < totalQuestions; x++){
-                let fieldDescription = questions[x];
-                let fieldId = fieldDescription["id"];
-                let fieldTitle = fieldDescription["title"];
-                let fieldType = fieldDescription["type"];
-                let fieldInputType = "";
-                let compressedTitle = fieldTitle.replace(/\s+/g, '');
-                
-                if((fieldTitle != "Name") && (fieldTitle != "Phone") && (fieldTitle != "Location") && (fieldTitle != "Response Time")&& (fieldTitle != "My Photo"))
-                {
-                    if(fieldType == 0){
 
-                    }
-                    else{
-                        let myDate = document.getElementById(compressedTitle).value;
-                        if((formValue == "") || (formValue == null)){
-                            nextButtonIsDisabled = true;
+                for (var x = 0; x < totalQuestions; x++) {
+                    let fieldDescription = questions[x];
+                    let fieldId = fieldDescription["id"];
+                    let fieldTitle = fieldDescription["title"];
+                    let fieldType = fieldDescription["type"];
+                    let fieldInputType = "";
+                    let compressedTitle = fieldTitle.replace(/\s+/g, '');
+
+                    if ((fieldTitle != "Name") && (fieldTitle != "Phone") && (fieldTitle != "Location") && (fieldTitle != "Response Time") && (fieldTitle != "My Photo")) {
+                        if (fieldType == 0) {
+                          
+                        }else{
+                            let formValue = document.getElementById(compressedTitle).value;
+                            if((formValue == "") || (formValue == null)){
+                                nextButtonIsDisabled = true;
+                            }
                         }
                     }
                 }
-            }
-                //Ensure mandatory fields are filled in
-
-                // if (_bouquetNumberQuestion == "" || _bouquetPacksQuestion == "") {
-                //     nextButtonIsDisabled = true;
-                // }
-
 
             } else if (_currentPage == 2) {
                 if (_isLocationRefreshing) {
